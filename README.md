@@ -1,10 +1,13 @@
 Responsive Web Layout with CSS Grid and Tailwind CSS
+
 This project demonstrates a responsive web layout built using a combination of CSS Grid for the main structural layout and Tailwind CSS for component-level styling and utility.
 
-Objective
+Objective:
+
 The objective was to create a fully responsive web page that adapts seamlessly across desktop, tablet, and mobile devices, with CSS Grid as the primary layout system for major sections.
 
-Technologies Used
+Technologies Used:
+
 HTML5: For semantic content structure.
 
 CSS Grid: For the main page layout (header, main, footer) and key sections (navigation, hero, features).
@@ -15,7 +18,8 @@ Google Fonts: For 'Inter' font and 'Material Symbols Outlined' icons.
 
 Font Awesome (CDN): For social media or other general icons.
 
-Features
+Features:
+
 Fully Responsive: Layout adapts to different screen sizes.
 
 CSS Grid Driven: Main layout achieved using display: grid and media queries.
@@ -26,7 +30,8 @@ Modern CSS Practices: Clean, organized CSS with clear separation of concerns.
 
 Efficient Styling: Leverages Tailwind CSS utilities for rapid and consistent component styling.
 
-Setup Instructions
+Setup Instructions:
+
 To run this project locally, simply follow these steps:
 
 Save the files:
@@ -39,7 +44,8 @@ Open index.html: Double-click the index.html file in your web browser.
 
 That's it! The page should load and be responsive.
 
-Code Explanation
+Code Explanation:
+
 index.html:
 
 Includes the <meta name="viewport"> tag for proper responsiveness.
@@ -66,7 +72,8 @@ Employs media queries (@media (min-width: 640px) and @media (min-width: 1024px))
 
 Includes basic font-family settings and root variables for colors for maintainability.
 
-Responsive Breakpoints
+Responsive Breakpoints:
+
 Mobile (default):
 
 Navigation: Logo on left, mobile menu button on right. Navigation links and desktop button are hidden.
