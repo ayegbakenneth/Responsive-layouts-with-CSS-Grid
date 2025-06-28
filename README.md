@@ -1,5 +1,7 @@
 Responsive Web Layout with CSS Grid and Tailwind CSS
 
+Project Live URL: https://ayegbakenneth.github.io/Responsive-layouts-with-CSS-Grid/
+
 This project demonstrates a responsive web layout built using a combination of CSS Grid for the main structural layout and Tailwind CSS for component-level styling and utility.
 
 Objective:
