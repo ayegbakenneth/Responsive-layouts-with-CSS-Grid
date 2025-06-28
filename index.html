@@ -1,84 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Professional Grid Landing Page</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Responsive Web Page</title>
+  <!-- Custom Styles for CSS Grid Layout -->
+  <link rel="stylesheet" href="styles.css">
+  <!-- Tailwind CSS CDN (for component styling) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts - Inter (for overall font) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Google Fonts - Material Symbols Outlined (for menu icon) -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <!-- Font Awesome for social icons -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">MyBrand</div>
-            <ul class="nav-links">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Features</a></li>
-                <li><a href="#">Testimonials</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
+  <!-- Main container for the entire layout, managed by CSS Grid -->
+  <div class="main-layout-container bg-gradient-to-br from-slate-50 to-slate-100 min-h-screen">
+
+    <!-- Header Section -->
+    <header class="header-grid w-full bg-white shadow-sm border-b border-slate-200">
+      <nav class="nav-grid max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+        <!-- Logo -->
+        <div class="logo-area flex items-center">
+          <span class="text-2xl font-bold text-primary-600 hover:text-primary-700 transition-colors duration-300">MyBrand</span>
+        </div>
+        
+        <!-- Navigation Links (Hidden on mobile, shown on larger screens by CSS Grid) -->
+        <div class="nav-links-area hidden-on-mobile">
+          <ul class="flex space-x-8 justify-center">
+            <li><a href="#" class="text-slate-700 hover:text-primary-600 font-medium transition-colors duration-300 hover:scale-105 transform">Home</a></li>
+            <li><a href="#" class="text-slate-700 hover:text-primary-600 font-medium transition-colors duration-300 hover:scale-105 transform">Features</a></li>
+            <li><a href="#" class="text-slate-700 hover:text-primary-600 font-medium transition-colors duration-300 hover:scale-105 transform">Testimonials</a></li>
+            <li><a href="#" class="text-slate-700 hover:text-primary-600 font-medium transition-colors duration-300 hover:scale-105 transform">Contact</a></li>
+          </ul>
+        </div>
+        
+        <!-- Action Buttons / Mobile Menu Toggle -->
+        <div class="action-buttons-area flex justify-end">
+          <!-- Mobile Menu Button (Visible on mobile, hidden on larger screens by CSS Grid) -->
+          <button class="mobile-menu-button p-2 rounded-md hover:bg-slate-100 transition-colors duration-300">
+            <span class="material-symbols-outlined">menu</span>
+          </button>
+          <!-- Desktop Get Started Button (Hidden on mobile, visible on larger screens by CSS Grid) -->
+          <button class="desktop-get-started-button bg-primary-600 text-white px-6 py-2 rounded-lg hover:bg-primary-700 transform hover:scale-105 transition-all duration-300 shadow-md hover:shadow-lg">
+            Get Started
+          </button>
+        </div>
+      </nav>
     </header>
 
-    <main>
-        <!-- Hero Section -->
-        <section class="hero">
-            <div class="hero-content">
-                <h1>Welcome to MyBrand</h1>
-                <p>Your premier solution for modern web development</p>
-                <a href="#" class="cta-button">Get Started</a>
+    <!-- Main Content Area -->
+    <main class="main-content-area w-full">
+      <!-- Hero Section -->
+      <section class="hero-section max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
+        <div class="hero-content-grid items-center">
+          <div class="space-y-6">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 leading-tight">
+              Welcome to <span class="text-primary-600">MyBrand</span>
+            </h1>
+            <p class="text-xl text-slate-600 leading-relaxed">
+              Your premier solution for modern web development with cutting-edge technologies and exceptional performance.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4">
+              <button class="bg-primary-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-primary-700 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl">
+                Get Started Free
+              </button>
+              <button class="border-2 border-slate-300 text-slate-700 px-8 py-4 rounded-lg font-semibold hover:border-primary-600 hover:text-primary-600 transform hover:scale-105 transition-all duration-300">
+                Learn More
+              </button>
             </div>
-            <div class="hero-image">
-                <img src="https://via.placeholder.com/600x400" alt="Hero Image">
+          </div>
+          <div class="relative">
+            <div class="bg-gradient-to-br from-primary-400 to-primary-600 rounded-2xl p-8 transform hover:scale-105 transition-transform duration-300 shadow-2xl">
+              <img 
+                src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop&crop=center" 
+                alt="Modern web development workspace" 
+                class="w-full h-64 md:h-80 object-cover rounded-lg shadow-lg"
+              />
             </div>
-        </section>
+          </div>
+        </div>
+      </section>
 
-        <!-- Features Section -->
-        <section class="features">
-            <h2>Our Features</h2>
-            <div class="feature-cards">
-                <article class="feature-card">
-                    <div class="icon">⚡</div>
-                    <h3>Lightning Fast</h3>
-                    <p>Experience blazing fast performance with our optimized codebase.</p>
-                </article>
-                <article class="feature-card">
-                    <div class="icon">🔒</div>
-                    <h3>Secure</h3>
-                    <p>Enterprise-grade security features built into every component.</p>
-                </article>
-                <article class="feature-card">
-                    <div class="icon">🎨</div>
-                    <h3>Beautiful Design</h3>
-                    <p>Modern, responsive designs that adapt to any device.</p>
-                </article>
-            </div>
-        </section>
-
-        <!-- Testimonials Section -->
-        <section class="testimonials">
-            <h2>What Our Clients Say</h2>
-            <div class="testimonial-cards">
-                <article class="testimonial-card">
-                    <blockquote>"This is the best solution I've ever used!"</blockquote>
-                    <cite>- Jane Doe, CEO</cite>
-                </article>
-                <article class="testimonial-card">
-                    <blockquote>"Exceptional service and support."</blockquote>
-                    <cite>- John Smith, Developer</cite>
-                </article>
-            </div>
-        </section>
-
-        <!-- CTA Section -->
-        <section class="cta">
-            <h2>Ready to Get Started?</h2>
-            <p>Join thousands of satisfied customers today.</p>
-            <a href="#" class="cta-button">Sign Up Now</a>
-        </section>
+      <!-- Features Section -->
+      <section class="features-section bg-white py-16 lg:py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Our Features</h2>
+            <p class="text-xl text-slate-600 max-w-2xl mx-auto">Discover the powerful features that make our platform the perfect choice for your business.</p>
+          </div>
+          <div class="features-grid">
+            <article class="bg-slate-50 p-8 rounded-xl hover:bg-white hover:shadow-xl transform hover:scale-105 transition-all duration-300 border border-slate-200">
+              <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mb-6 hover:bg-primary-200 transition-colors duration-300">
+                <span class="text-3xl">⚡</span>
+              </div>
+              <h3 class="text-xl font-semibold text-slate-900 mb-4">Lightning Fast</h3>
+              <p class="text-slate-600 leading-relaxed">Experience blazing fast performance with our optimized codebase and advanced caching mechanisms.</p>
+            </article>
+            <article class="bg-slate-50 p-8 rounded-xl hover:bg-white hover:shadow-xl transform hover:scale-105 transition-all duration-300 border border-slate-200">
+              <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mb-6 hover:bg-primary-200 transition-colors duration-300">
+                <span class="text-3xl">🔒</span>
+              </div>
+              <h3 class="text-xl font-semibold text-slate-900 mb-4">Enterprise Security</h3>
+              <p class="text-slate-600 leading-relaxed">Enterprise-grade security features built into every component with end-to-end encryption.</p>
+            </article>
+            <article class="bg-slate-50 p-8 rounded-xl hover:bg-white hover:shadow-xl transform hover:scale-105 transition-all duration-300 border border-slate-200">
+              <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mb-6 hover:bg-primary-200 transition-colors duration-300">
+                <span class="text-3xl">🎨</span>
+              </div>
+              <h3 class="text-xl font-semibold text-slate-900 mb-4">Beautiful Design</h3>
+              <p class="text-slate-600 leading-relaxed">Modern, responsive designs that adapt seamlessly to any device and screen size.</p>
+            </article>
+          </div>
+        </div>
+      </section>
     </main>
 
-    <footer>
-        <p>&copy; 2025 MyBrand. All rights reserved.</p>
+    <!-- Footer Section -->
+    <footer class="footer-grid bg-slate-900 border-t border-slate-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="text-center text-slate-400">
+          &copy; 2025 MyBrand. All rights reserved.
+        </div>
+      </div>
     </footer>
+  </div>
 </body>
 </html>
